@@ -1,0 +1,441 @@
+.patient-dashboard-content {
+  padding: 2rem;
+}
+
+.patient-dashboard-content h2 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Patient Info Card */
+.patient-info-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.patient-info-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.patient-avatar {
+  font-size: 4rem;
+  background: rgba(255, 255, 255, 0.2);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.patient-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.patient-details p {
+  margin: 0.3rem 0;
+  opacity: 0.9;
+}
+
+.patient-info-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-patient {
+  padding: 0.7rem 1.5rem;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-patient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Patient Section */
+.patient-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.patient-section h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+/* Medical History */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-left: 4px solid #667eea;
+  border-radius: 6px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.history-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-left {
+  min-width: 120px;
+}
+
+.history-date {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.history-doctor {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.history-middle {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.history-diagnosis {
+  color: #333;
+  font-weight: 500;
+}
+
+.history-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.history-status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #d4edda;
+  color: #155724;
+}
+
+.btn-view {
+  padding: 0.4rem 0.8rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.btn-view:hover {
+  background: #764ba2;
+}
+
+/* Prescriptions Grid */
+.prescriptions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.prescription-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.rx-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.rx-header h4 {
+  color: #333;
+  margin: 0;
+}
+
+.rx-status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.rx-status.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.rx-status.completed {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.rx-body {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.rx-body p {
+  margin: 0.5rem 0;
+}
+
+.btn-view-rx {
+  width: 100%;
+  padding: 0.6rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-view-rx:hover {
+  background: #764ba2;
+}
+
+/* Lab Tests Table */
+.lab-tests-table {
+  overflow-x: auto;
+}
+
+.lab-tests-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lab-tests-table th {
+  background: #f5f5f5;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.lab-tests-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.lab-tests-table tr:hover {
+  background: #f9f9f9;
+}
+
+.test-status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.test-status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.test-status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Health Reminders */
+.reminders {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reminder-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-left: 4px solid #667eea;
+  border-radius: 6px;
+}
+
+.reminder-icon {
+  font-size: 1.5rem;
+}
+
+.reminder-text {
+  color: #666;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .patient-info-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .patient-info-actions {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .history-item {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .history-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .prescriptions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* No Data and Loading States */
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-style: italic;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 2rem;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+  .lab-tests-table {
+    font-size: 0.9rem;
+  }
+}
+
+/* Appointment Items */
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appointment-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-left: 4px solid #667eea;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.apt-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.apt-date {
+  font-weight: 600;
+  color: #333;
+}
+
+.apt-doctor {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.apt-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.apt-reason,
+.apt-notes {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.apt-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.apt-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.apt-status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.apt-status.confirmed {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.apt-status.completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.apt-status.cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}

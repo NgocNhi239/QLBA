@@ -1,0 +1,312 @@
+.prescriptions-container,
+.lab-tests-container,
+.appointments-container {
+  padding: 20px;
+}
+
+.prescriptions-container h1,
+.lab-tests-container h1,
+.appointments-container h1 {
+  color: #5b63d0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.btn-create {
+  padding: 10px 20px;
+  background-color: #5b63d0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-create:hover {
+  background-color: #4a4fa0;
+}
+
+.form-section {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background-color: #5b63d0;
+  color: white;
+  border-color: #5b63d0;
+}
+
+.filter-btn:hover {
+  border-color: #5b63d0;
+}
+
+.appointments-table,
+.prescriptions-list,
+.tests-list {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.appointments-table table,
+.prescriptions-list table,
+.tests-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table th,
+.appointments-table td,
+.prescriptions-list th,
+.prescriptions-list td,
+.tests-list th,
+.tests-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.appointments-table th,
+.prescriptions-list th,
+.tests-list th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #333;
+}
+
+.appointments-table tr:hover,
+.prescriptions-list tr:hover,
+.tests-list tr:hover {
+  background-color: #f9f9f9;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.confirmed {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-badge.completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.btn-confirm,
+.btn-complete,
+.btn-view,
+.btn-cancel,
+.btn-save {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-confirm,
+.btn-complete {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-confirm:hover,
+.btn-complete:hover {
+  background-color: #218838;
+}
+
+.btn-view {
+  background-color: #5b63d0;
+  color: white;
+}
+
+.btn-view:hover {
+  background-color: #4a4fa0;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #c82333;
+}
+
+.btn-save {
+  background-color: #5b63d0;
+  color: white;
+  padding: 8px 16px;
+}
+
+.btn-save:hover {
+  background-color: #4a4fa0;
+}
+
+.info-text {
+  color: #666;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.total-count {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* Searchable Selector */
+.searchable-selector {
+  position: relative;
+}
+
+.selector-input {
+  width: 100% !important;
+  padding: 10px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  font-family: inherit !important;
+}
+
+.selector-input:focus {
+  outline: none;
+  border-color: #5b63d0 !important;
+  box-shadow: 0 0 4px rgba(91, 99, 208, 0.3) !important;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item div {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.dropdown-item small {
+  font-size: 12px;
+  color: #999;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Patient Filter */
+.patient-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.patient-filter label {
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.patient-filter select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
