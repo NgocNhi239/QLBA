@@ -30,57 +30,25 @@ const LabTest = sequelize.define('LabTest', {
   testCode: {
     type: DataTypes.STRING
   },
-  testCategory: {
-    type: DataTypes.ENUM('hematology', 'biochemistry', 'coagulation', 'serology', 'urinalysis', 'microbiology', 'imaging', 'other'),
-    defaultValue: 'other',
-    comment: 'Nhóm xét nghiệm'
-  },
   orderedDate: {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW
   },
-  orderedBy: {
-    type: DataTypes.UUID,
-    allowNull: true,
-    comment: 'Bác sĩ chỉ định (userId)'
-  },
-  performedDate: {
-    type: DataTypes.DATE,
-    allowNull: true,
-    comment: 'Ngày thực hiện xét nghiệm'
-  },
-  performedBy: {
-    type: DataTypes.UUID,
-    allowNull: true,
-    comment: 'Y tá/kỹ thuật viên thực hiện'
-  },
   resultDate: {
-    type: DataTypes.DATE,
-    allowNull: true
+    type: DataTypes.DATE
   },
   resultValue: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-    comment: 'Kết quả xét nghiệm'
+    type: DataTypes.TEXT
   },
   normalRange: {
-    type: DataTypes.STRING,
-    allowNull: true,
-    comment: 'Giá trị tham chiếu bình thường'
+    type: DataTypes.STRING
   },
   unit: {
-    type: DataTypes.STRING,
-    allowNull: true,
-    comment: 'Đơn vị đo'
+    type: DataTypes.STRING
   },
   status: {
     type: DataTypes.ENUM('pending', 'completed', 'abnormal'),
     defaultValue: 'pending'
-  },
-  interpretation: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-    comment: 'Diễn giải kết quả'
   },
   notes: {
     type: DataTypes.TEXT

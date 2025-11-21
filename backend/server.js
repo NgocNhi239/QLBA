@@ -31,9 +31,6 @@ app.use('/api/diagnoses', require('./routes/diagnoses'));
 app.use('/api/appointments', require('./routes/appointments'));
 app.use('/api/admin', require('./routes/admin'));
 app.use('/api/preferences', require('./routes/preferences'));
-app.use('/api/medical-history', require('./routes/medicalHistory'));
-app.use('/api/vital-signs', require('./routes/vitalSigns'));
-app.use('/api/documents', require('./routes/documents'));
 
 // Error handling middleware
 app.use((err, req, res, next) => {

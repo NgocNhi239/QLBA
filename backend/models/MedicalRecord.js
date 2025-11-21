@@ -26,11 +26,6 @@ const MedicalRecord = sequelize.define('MedicalRecord', {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW
   },
-  visitType: {
-    type: DataTypes.ENUM('initial', 'followup', 'emergency', 'routine'),
-    defaultValue: 'routine',
-    comment: 'Loại khám'
-  },
   department: {
     type: DataTypes.STRING
   },
@@ -43,42 +38,17 @@ const MedicalRecord = sequelize.define('MedicalRecord', {
   clinicalExamination: {
     type: DataTypes.TEXT
   },
-  physicalExamDetails: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-    comment: 'Chi tiết khám thể lực (lưu trữ JSON hoặc text)'
-  },
   diagnosis: {
     type: DataTypes.TEXT
   },
   primaryDiagnosis: {
     type: DataTypes.STRING
   },
-  secondaryDiagnosis: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-    comment: 'Các chẩn đoán phụ'
-  },
   treatment: {
     type: DataTypes.TEXT
   },
   examResult: {
     type: DataTypes.TEXT
-  },
-  followUpRequired: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: false,
-    comment: 'Có cần theo dõi sau'
-  },
-  followUpDate: {
-    type: DataTypes.DATE,
-    allowNull: true,
-    comment: 'Ngày tái khám dự kiến'
-  },
-  followUpNotes: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-    comment: 'Hướng dẫn tái khám'
   },
   notes: {
     type: DataTypes.TEXT

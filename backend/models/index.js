@@ -6,9 +6,6 @@ const Prescription = require('./Prescription');
 const LabTest = require('./LabTest');
 const Appointment = require('./Appointment');
 const Doctor = require('./Doctor');
-const MedicalHistory = require('./MedicalHistory')(sequelize);
-const VitalSigns = require('./VitalSigns')(sequelize);
-const PatientDocument = require('./PatientDocument')(sequelize);
 const SystemLog = require('./SystemLog')(sequelize);
 const Activity = require('./Activity')(sequelize);
 const SystemSettings = require('./SystemSettings')(sequelize);
@@ -46,21 +43,6 @@ Appointment.belongsTo(Doctor, { foreignKey: 'doctorId', as: 'doctor' });
 Patient.hasMany(Appointment, { foreignKey: 'patientId', as: 'appointments' });
 Appointment.belongsTo(Patient, { foreignKey: 'patientId', as: 'patient' });
 
-// MedicalHistory associations
-Patient.hasOne(MedicalHistory, { foreignKey: 'patientId', as: 'medicalHistory' });
-MedicalHistory.belongsTo(Patient, { foreignKey: 'patientId', as: 'patient' });
-
-// VitalSigns associations
-MedicalRecord.hasMany(VitalSigns, { foreignKey: 'medicalRecordId', as: 'vitalSigns' });
-VitalSigns.belongsTo(MedicalRecord, { foreignKey: 'medicalRecordId', as: 'medicalRecord' });
-
-// PatientDocument associations
-Patient.hasMany(PatientDocument, { foreignKey: 'patientId', as: 'documents' });
-PatientDocument.belongsTo(Patient, { foreignKey: 'patientId', as: 'patient' });
-
-MedicalRecord.hasMany(PatientDocument, { foreignKey: 'medicalRecordId', as: 'documents' });
-PatientDocument.belongsTo(MedicalRecord, { foreignKey: 'medicalRecordId', as: 'medicalRecord' });
-
 User.hasOne(UserPreference, { foreignKey: 'userId', as: 'preferences' });
 UserPreference.belongsTo(User, { foreignKey: 'userId', as: 'user' });
 
@@ -87,9 +69,6 @@ module.exports = {
   Prescription,
   LabTest,
   Appointment,
-  MedicalHistory,
-  VitalSigns,
-  PatientDocument,
   SystemLog,
   Activity,
   SystemSettings,
